@@ -4,8 +4,8 @@ import lombok.Data;
 
 import javax.persistence.*;
 
+
 @Entity
-@Data
 @Table(name = "political_party")
 public class PoliticalParty {
 
@@ -33,5 +33,37 @@ public class PoliticalParty {
     // Constructors, getters, and setters
 
     public PoliticalParty() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Country getCountry() {
+        return country;
+    }
+
+    public void setCountry(Country country) {
+        this.country = country;
     }
 }

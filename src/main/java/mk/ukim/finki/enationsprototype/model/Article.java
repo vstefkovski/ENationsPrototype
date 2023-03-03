@@ -3,6 +3,7 @@ package mk.ukim.finki.enationsprototype.model;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
 
 @Entity
 @Data
@@ -21,10 +22,13 @@ public class Article {
     private Integer likes;
 
     @ManyToOne
-    @JoinColumn(name = "id_newspaper")
+    @JoinColumn(name = "id_newspaper", referencedColumnName = "id_newspaper")
     private Newspaper newspaper;
 
     private String category;
+
+    @Column(name="created_at")
+    private Timestamp createdAt;
 
     public Article(String title, String text, Integer likes, Newspaper newspaper, String category) {
         this.title = title;

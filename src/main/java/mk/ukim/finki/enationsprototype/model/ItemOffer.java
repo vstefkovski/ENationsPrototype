@@ -26,7 +26,7 @@ public class ItemOffer {
     private User user;
 
     @Column(name = "price")
-    private BigDecimal price;
+    private Double price;
 
     @Column(name = "quantity")
     private Integer quantity;
@@ -38,7 +38,7 @@ public class ItemOffer {
     // constructors, getters and setters
 
 
-    public ItemOffer(Integer item, Integer quality, User user, BigDecimal price, Integer quantity, Country country) {
+    public ItemOffer(Integer item, Integer quality, User user, Double price, Integer quantity, Country country) {
         this.item = item;
         this.quality = quality;
         this.user = user;

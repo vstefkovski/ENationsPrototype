@@ -2,7 +2,7 @@ package mk.ukim.finki.enationsprototype.service.impl;
 
 import mk.ukim.finki.enationsprototype.model.PoliticalParty;
 import mk.ukim.finki.enationsprototype.model.exceptions.PolitcalPartyNotFound;
-import mk.ukim.finki.enationsprototype.repository.jpa.PoliticalPartyRepository;
+import mk.ukim.finki.enationsprototype.repository.PoliticalPartyRepository;
 import mk.ukim.finki.enationsprototype.service.PoliticalPartyService;
 import org.springframework.stereotype.Service;
 

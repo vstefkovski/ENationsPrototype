@@ -26,7 +26,7 @@ public class LawProposal {
     private String reason;
 
     @Column(name = "amount")
-    private BigDecimal amount;
+    private Double amount;
 
     @Column(name = "yes")
     private Integer yes;
@@ -43,7 +43,7 @@ public class LawProposal {
     @Column(name = "votes")
     private Integer votes;
 
-    public LawProposal(CongressMember congressMember, Integer type, String reason, BigDecimal amount, Integer yes, Integer no, Integer expectedVotes, Integer finished, Integer votes) {
+    public LawProposal(CongressMember congressMember, Integer type, String reason, Double amount, Integer yes, Integer no, Integer expectedVotes, Integer finished, Integer votes) {
         this.congressMember = congressMember;
         this.type = type;
         this.reason = reason;

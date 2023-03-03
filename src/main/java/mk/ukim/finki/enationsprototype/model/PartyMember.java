@@ -17,8 +17,14 @@ public class PartyMember {
     @JoinColumn(name = "id_party")
     private PoliticalParty politicalParty;
 
-    public PartyMember(PoliticalParty politicalParty) {
+    @OneToOne
+    @JoinColumn(name = "id_user")
+    private User user;
+
+
+    public PartyMember(PoliticalParty politicalParty, User user) {
         this.politicalParty = politicalParty;
+        this.user = user;
     }
 
     public PartyMember() {

@@ -10,21 +10,22 @@ import javax.persistence.*;
 public class UserMoney {
 
     @Id
-    private int id_user;
+    @Column(name = "id_user")
+    private Integer id;
 
-    private double gold;
+    private Double gold;
 
-    private double curr;
+    private Double curr;
 
-    @OneToOne
-    @PrimaryKeyJoinColumn
+    @OneToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "id_user")
     private User user;
 
     public UserMoney() {
     }
 
-    public UserMoney(int id_user, double gold, double curr, User user) {
-        this.id_user = id_user;
+    public UserMoney(int id, Double gold, Double curr, User user) {
+        this.id = id;
         this.gold = gold;
         this.curr = curr;
         this.user = user;

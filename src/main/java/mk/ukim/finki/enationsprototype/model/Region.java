@@ -18,17 +18,20 @@ public class Region {
     @Column(name = "name")
     private String name;
 
+//    @OneToMany
+//    @JoinColumn(name = "id_country")
+//    private List<Region> regions;
+
     @ManyToOne
     @JoinColumn(name = "id_country")
     private Country country;
 
-    @OneToMany(mappedBy = "region")
-    private List<User> users;
+//    @OneToMany(mappedBy = "region")
+//    private List<User> users;
 
-    public Region(String name, Country country, List<User> users) {
+    public Region(String name, Country country) {
         this.name = name;
         this.country = country;
-        this.users = users;
     }
 
     public Region() {

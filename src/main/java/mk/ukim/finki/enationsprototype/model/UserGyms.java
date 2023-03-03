@@ -33,4 +33,7 @@ public class UserGyms {
         this.q4 = q4;
         this.user = user;
     }
+
+    public UserGyms() {
+    }
 }
