@@ -5,6 +5,7 @@ import lombok.Data;
 import javax.persistence.*;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -43,11 +44,15 @@ public class User {
     @JoinColumn(name = "id_company")
     private Company company;
 
+    @ManyToOne
+    @JoinColumn(name = "id_chat")
+    private Chat chat;
+
     // Constructors, getters, and setters
     // ...
 
 
-    public User(String username, String password, String email, Integer level, Integer xp, Integer strength, Region region, Company company) {
+    public User(String username, String password, String email, Integer level, Integer xp, Integer strength, Region region, Company company, Chat chat) {
         this.username = username;
         this.password = password;
         this.email = email;
@@ -56,6 +61,7 @@ public class User {
         this.strength = strength;
         this.region = region;
         this.company = company;
+        this.chat = chat;
     }
 
     public User() {

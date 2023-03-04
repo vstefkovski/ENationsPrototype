@@ -8,10 +8,7 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-@EnableJpaRepositories
-@SpringBootApplication(exclude={DataSourceAutoConfiguration.class})
-@EnableTransactionManagement
-
+@SpringBootApplication
 public class ENationsPrototypeApplication {
 
     public static void main(String[] args) {

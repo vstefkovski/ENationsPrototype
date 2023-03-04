@@ -6,6 +6,7 @@ import javax.persistence.*;
 
 
 @Entity
+@Data
 @Table(name = "political_party")
 public class PoliticalParty {
 
@@ -14,7 +15,7 @@ public class PoliticalParty {
     @Column(name = "id_party")
     private Long id;
 
-    @Column(name = "name")
+    @Column(name = "party_name")
     private String name;
 
     @Column(name = "description")

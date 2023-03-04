@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.security.Timestamp;
 
 @Entity
 @Data
@@ -40,10 +41,10 @@ public class LawProposal {
     @Column(name = "finished")
     private Integer finished;
 
-    @Column(name = "votes")
-    private Integer votes;
+    @Column(name = "created_at")
+    private Timestamp createdAt;
 
-    public LawProposal(CongressMember congressMember, Integer type, String reason, Double amount, Integer yes, Integer no, Integer expectedVotes, Integer finished, Integer votes) {
+    public LawProposal(CongressMember congressMember, Integer type, String reason, Double amount, Integer yes, Integer no, Integer expectedVotes, Integer finished, Timestamp createdAt) {
         this.congressMember = congressMember;
         this.type = type;
         this.reason = reason;
@@ -52,7 +53,7 @@ public class LawProposal {
         this.no = no;
         this.expectedVotes = expectedVotes;
         this.finished = finished;
-        this.votes = votes;
+        this.createdAt = createdAt;
     }
 
     public LawProposal() {

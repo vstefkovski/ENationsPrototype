@@ -13,7 +13,7 @@ public class Country {
     @Column(name = "id_country")
     private Long id;
 
-    @Column(name = "name")
+    @Column(name = "country_name")
     private String name;
 
     @Column(name = "currency")

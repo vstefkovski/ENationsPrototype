@@ -18,7 +18,7 @@ public class Newspaper {
     @JoinColumn(name = "id_user")
     private User user;
 
-    @Column(name = "name")
+    @Column(name = "newspaper_name")
     private String name;
 
     @Column(name = "description")
